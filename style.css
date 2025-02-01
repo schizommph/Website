@@ -1,0 +1,191 @@
+@font-face {
+	font-family: Tajawal;
+	src: url('tajawal.ttf');
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-track {
+	background: #aaf7d6;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #65ca96;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #55bd83;
+}
+
+html {
+	margin: 10px;
+}
+
+body {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background: white;
+	background: linear-gradient(180deg, #a5bfeb 0%, #04064c 100%);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	background-image: url('static/bg.png');
+	display: table;
+	margin: 12px auto 24px;
+
+	font-size: 1em;
+
+	overflow-x: hidden;
+	font-family: Tajawal;
+}
+
+h1, p {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+/*
+	padding: 12px;
+	box-sizing: border-box;
+*/
+
+main {
+	background: white;
+	max-width:800px;
+	width:800px;
+	/*border: linear-gradient(180deg, #496ca5 0%, #4f4bbd 50%, #302e68 50%, #4f4bbd 100%) 1;*/
+	box-sizing: border-box;
+}
+
+main::before {
+	content: "";
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	right: -4px;
+	bottom: -4px;
+	border-radius: 4px;
+	background: linear-gradient(180deg, #496ca5 0%, #4f4bbd 50%, #302e68 50%, #4f4bbd 100%);
+	z-index: -1;
+	box-sizing: border-box;
+}
+
+.menu-title{
+	color: black;
+	text-shadow: 0 0 5px white;
+	pointer-events: none;
+	height:26px;
+	margin-top: 0px;
+	padding-left: 5px;
+}
+
+.menu-bar {
+	height: 32px;
+	background: linear-gradient(180deg, #ffffff 0%, #c0cce0 50%, #a7b7cf 50%, #c0cce0 100%);
+	margin:0;
+	display:flex;
+	box-sizing: border-box;
+	text-shadow: 0 0 5px white;
+}
+.menu-bar-item {
+	height:100%;
+	display: flex;
+	align-items: center;
+	padding-left:12px;
+	padding-right:12px;
+	color:black;
+	text-decoration: none;
+}
+.menu-bar-item:hover {
+	background-color: #ffffff38;
+}
+
+.page-content {
+	padding: 8px;
+	padding-bottom: 4px;
+	outline:none;
+}
+
+.mmph {
+	color:#c9166d;
+	text-shadow: 0 0 3px #c9166d;
+}
+
+@media only screen and (max-width: 900px) {
+	body {
+		display: block;
+		margin: 0;
+	}
+	main {
+		width:100%;
+		max-width: 100%;
+		min-height:100%;
+	}
+}
+
+.banner {
+	width:100%;
+	border-radius: 4px;
+}
+
+.emoji {
+	height: 1em;
+    vertical-align:sub;
+}
+
+.game {
+	color: #57c77c;
+	text-shadow: 0 0 3px #57c77c;
+}
+
+.content-image {
+	height: 170px;
+	border-radius: 4px;
+}
+
+.shelf-holder {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 12px;
+}
+
+.shelf {
+	background-image: url("static/bookshelf.png");
+	background-size: 100% auto;
+	width:600px;
+	display: inline-grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.shelf-game {
+	width:200px;
+	height: 211px;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	perspective: 1000px;
+}
+.shelf-game-cover {
+	position: absolute;
+	bottom: 14px;
+	height: 96px;
+	animation-name: shelf-game-rotate;
+  	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes shelf-game-rotate {
+	from {
+		transform: rotate3d(0, 0, 0, 0deg);
+	}
+	to {
+		transform: rotate3d(0, 1, 0, 360deg);
+	}
+  }
